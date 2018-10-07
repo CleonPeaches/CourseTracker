@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong>Nine hundred number:</strong>
+  <%= @student.nine_hundred_number %>
+</p>
+
+<p>
+  <strong>Sections:</strong>
+  <ol>
+    <%= x = Enrollment.all %>
+    <%= @x.each do |enrollment| %>
+      <li><%= enrollment.section.to_s %></li>
+    <% end %>
+  </ol>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

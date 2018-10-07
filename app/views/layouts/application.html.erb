@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CourseTracker</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Courses", courses_path %></li>
+        <li><%= link_to "Sections", sections_path %></li>
+        <li><%= link_to "Students", students_path %></li>
+        <li><%= link_to "Enrollments", enrollments_path %></li>
+      </ul>
+    </nav>
+  </body>
+</html>
