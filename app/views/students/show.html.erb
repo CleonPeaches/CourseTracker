@@ -13,9 +13,8 @@
 <p>
   <strong>Sections:</strong>
   <ol>
-    <%= @x = Enrollment.all %>
-    <%= @x.each do |enrollment| %>
-      <li><%= enrollment.section.to_s %></li>
+    <%= @student.sections.each do |section| %>
+      <li><%= section.to_s %></li>
     <% end %>
   </ol>
 </p>

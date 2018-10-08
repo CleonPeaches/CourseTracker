@@ -19,15 +19,13 @@
   </thead>
 
   <tbody>
-    <% x = Enrollment.all %>
-    <% x.each do |enrollment| %>
+    <% @students.each do |student| %>
       <tr>
-        <td><%= enrollment.student.name %></td>
-        <td><%= enrollment.student.nine_hundred_number %></td>
-        <td><%= enrollment.section.to_s %></td>
-        <td><%= link_to 'Show', enrollment %></td>
-        <td><%= link_to 'Edit', edit_student_path(enrollment) %></td>
-        <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= student.name %></td>
+        <td><%= student.nine_hundred_number %></td>
+        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: {confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
