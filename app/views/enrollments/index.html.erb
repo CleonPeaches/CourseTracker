@@ -2,7 +2,7 @@
 
 <h1>Enrollments</h1>
 
-<%= form_tag(enrollment_path(@enrollments), method: "get", id: "search-form") do %>
+<%= form_tag(search_enrollments_url, method: "get") do %>
   <%= label_tag(:query, "Search for:") %>
   <%= text_field_tag(:query) %>
   <%= submit_tag("Search") %>

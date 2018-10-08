@@ -8,7 +8,8 @@ class EnrollmentsController < ApplicationController
   end
 
   def search
-    @enrollments = Enrollment.where("name like ?", "%#{params[:query]}%")
+    @enrollments = Enrollment.where("section_id like ?", "%#{params[:query]}%")
+    @enrollments += Enrollment.where("student_id like ?", "%#{params[:query]}%")
     render :index
   end
 

@@ -2,7 +2,7 @@
 
 <h1>Sections</h1>
 
-<%= form_tag(section_path(@sections), method: "get", id: "search-form") do %>
+<%= form_tag(search_sections_url, method: "get") do %>
   <%= label_tag(:query, "Search for:") %>
   <%= text_field_tag(:query) %>
   <%= submit_tag("Search") %>

@@ -2,7 +2,7 @@
 
 <h1>Courses</h1>
 
-<%= form_tag(course_path(@courses), method: "get", id: "search-form") do %>
+<%= form_tag(search_courses_url, method: "get") do %>
   <%= label_tag(:query, "Search for:") %>
   <%= text_field_tag(:query) %>
   <%= submit_tag("Search") %>

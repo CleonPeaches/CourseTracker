@@ -18,7 +18,9 @@ class SectionsController < ApplicationController
   end
 
   def search
-    @sections = Section.where("name like ?", "%#{params[:query]}%")
+    @sections = Section.where("semester like ?", "%#{params[:query]}%")
+    @sections += Section.where("room like ?", "%#{params[:query]}%")
+
     render :index
   end
 

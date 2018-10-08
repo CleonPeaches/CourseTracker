@@ -22,14 +22,14 @@
   </div>
 
   <div class="field">
-    <%= form.label "Sections" %>
-    <%= form.collection_check_boxes :section_ids, Section.all, :id, :to_s  do |b| %>
-      <div class = "collection-check-box">
-        <%= b.check_box %>
-        <%= b.label %>
-      </div>
-    <% end %>
-  </div>
+  <%= form.label "Sections" %>
+  <%= form.collection_check_boxes :section_ids, Section.all, :id, :to_s  do |b| %>
+    <div class = "collection-check-box">
+      <%= b.check_box %>
+      <%= b.label %>
+    </div>
+  <% end %>
+</div>
 
 
   <div class="actions">
