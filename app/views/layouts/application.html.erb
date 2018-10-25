@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CourseTracker</title>
+    <style>
+      body {
+        background: lightcyan;
+      }
+
+      nav {
+        text-align: left;
+      }
+
+    </style>
+    <title>Course Tracker</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +21,7 @@
   <body>
     <%= yield %>
     <nav>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
         <li><%= link_to "Courses", courses_path %></li>
         <li><%= link_to "Sections", sections_path %></li>
         <li><%= link_to "Students", students_path %></li>
