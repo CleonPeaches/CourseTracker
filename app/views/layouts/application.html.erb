@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <style>
+    ul {
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      appearance: button;
+
+      display:inline-block;
+      min-width: 60px;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      color:grey;
+    }
+  </style>
+    <nav>
+      <div class="nav navbar">
+        <ul><%=link_to "Courses", courses_path%></ul>
+        <ul><%=link_to "Sections", sections_path%></ul>
+        <ul><%=link_to "Students", students_path%></ul>
+        <ul><%=link_to "Enrollments", enrollments_path%></ul>
+      </div>
+    </nav>
+
+    <title>Course Tracker</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%= yield %>
     <style>
       body {
         background: lightcyan;
       }
-
-      nav {
-        text-align: left;
-      }
-
     </style>
-    <title>Course Tracker</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Courses", courses_path %></li>
-        <li><%= link_to "Sections", sections_path %></li>
-        <li><%= link_to "Students", students_path %></li>
-        <li><%= link_to "Enrollments", enrollments_path %></li>
-      </ul>
-    </nav>
   </body>
 </html>
+
+
